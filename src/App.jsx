@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import {
+  Container,
+  Button,
+  Form,
+  Input,
+  Title,
+  Grid,
+  Left,
+  Subtitle,
+  Icon,
+  ImagePet,
+} from "./style";
+import { LuDog } from "react-icons/lu";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Container>
+        <Left>
+         <Icon as={LuDog}/>
+          
+          <Subtitle>Bem vindo ao Cantinho pet</Subtitle>
+          
+        </Left>
+        <Form>
+          <Title>Cadastro</Title>
+          <Grid>
+            <Input type="text" name="name" placeholder="Nome completo" />
+            <Input type="text" name="phone" placeholder="Telefone" />
+            <Input type="date" name="date" placeholder="Data  de nascimento" />
+            <Input type="text" name="cpf" placeholder="CPF" />
+            <Input type="text" name="cep" placeholder="CEP" />
+            <Input type="text" name="city" placeholder="Cidade" disabled />
+            <Input type="text" name="state" placeholder="Estado" disabled />
+            <Input type="text" name="adress" placeholder="Endereço" />
+            <Input type="text" name="neighborhood" placeholder="Bairro" />
+            <Input type="email" placeholder="Email" />
+            <Input type="password" placeholder="Senha" />
+            <Input
+              type="password"
+              name="password-confirm"
+              placeholder="Confirmar senha"
+            />
+          </Grid>
+          <Button>Cadastrar</Button>
+        </Form>
+      </Container>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
