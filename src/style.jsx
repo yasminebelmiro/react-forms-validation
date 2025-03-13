@@ -148,3 +148,17 @@ export const Button = styled.button`
     font-size: 1.1rem;
   }
 `;
+
+export const Column = styled.div`
+width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Error = styled.p`
+color: red;
+`
+
+
