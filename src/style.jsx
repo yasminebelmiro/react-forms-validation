@@ -108,7 +108,7 @@ export const Icon = styled.div`
 
 export const Subtitle = styled.h2`
   padding: 30px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   z-index: 2;
   @media (max-width: 750px) {
     font-size: 1rem;
@@ -119,11 +119,13 @@ export const Input = styled.input`
   width: 90%;
   height: 40px;
   border: none;
+  font-size: 0.8rem;
   background-color: #fff;
   box-shadow: 1px 1px 5px #fcdc94;
   border-radius: 30px;
   padding: 0 10px;
 `;
+
 
 export const Button = styled.button`
   width: 30%;
@@ -150,15 +152,14 @@ export const Button = styled.button`
 `;
 
 export const Column = styled.div`
-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export const Error = styled.p`
-color: red;
-`
 
-
+export const ErrorMessage = styled.span`
+  color: red;
+`;
